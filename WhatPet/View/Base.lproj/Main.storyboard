@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="krX-dB-pUV">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cbA-U2-7Ta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="krX-dB-pUV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J5P-hv-Pag">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.18998533487319946" green="0.35768887400627136" blue="0.43821841478347778" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dvj-gW-nx3" kind="relationship" relationship="rootViewController" id="Wm4-It-oP1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9SI-Qa-ydf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.75" y="114.08450704225352"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2kS-Dy-CDe">
+            <objects>
+                <viewController id="Dvj-gW-nx3" customClass="ViewController" customModule="WhatPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="heI-TX-EmH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f1q-An-cuA">
+                                <rect key="frame" x="0.0" y="44" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f1q-An-cuA" secondAttribute="height" multiplier="1:1" id="N1D-OO-TRA"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18j-tr-ihb">
+                                <rect key="frame" x="10" y="374" width="300" height="184"/>
+                                <color key="backgroundColor" red="0.31669259869999999" green="0.57251011240000005" blue="0.68305129659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rvo-WQ-xaA"/>
+                        <color key="backgroundColor" red="0.31669259873487648" green="0.57251011237351845" blue="0.68305129655683883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f1q-An-cuA" firstAttribute="trailing" secondItem="Rvo-WQ-xaA" secondAttribute="trailing" id="Ec7-MI-QFd"/>
+                            <constraint firstItem="f1q-An-cuA" firstAttribute="top" secondItem="Rvo-WQ-xaA" secondAttribute="top" id="SUD-D5-47c"/>
+                            <constraint firstItem="18j-tr-ihb" firstAttribute="top" secondItem="f1q-An-cuA" secondAttribute="bottom" constant="10" id="aFr-Vw-dtM"/>
+                            <constraint firstItem="18j-tr-ihb" firstAttribute="leading" secondItem="Rvo-WQ-xaA" secondAttribute="leading" constant="10" id="jIL-HK-nyE"/>
+                            <constraint firstItem="Rvo-WQ-xaA" firstAttribute="trailing" secondItem="18j-tr-ihb" secondAttribute="trailing" constant="10" id="oAw-sx-faS"/>
+                            <constraint firstItem="f1q-An-cuA" firstAttribute="leading" secondItem="Rvo-WQ-xaA" secondAttribute="leading" id="ouh-bh-a98"/>
+                            <constraint firstItem="Rvo-WQ-xaA" firstAttribute="bottom" secondItem="18j-tr-ihb" secondAttribute="bottom" constant="10" id="tH4-92-NJ4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8j7-0A-em8">
+                        <barButtonItem key="rightBarButtonItem" image="camera.fill" catalog="system" id="3uM-UV-aeN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cameraButtonTapped:" destination="Dvj-gW-nx3" id="thC-9q-LBm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="18j-tr-ihb" id="Mka-wN-Yg1"/>
+                        <outlet property="imageView" destination="f1q-An-cuA" id="sMX-zV-fIc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01n-tD-MOm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126.25" y="114.08450704225352"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+    </resources>
+</document>

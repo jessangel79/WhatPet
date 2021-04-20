@@ -1,6 +1,6 @@
 //
 //  WikiService.swift
-//  WhatFlowerV1
+//  WhatPet
 //
 //  Created by Angelique Babin on 19/03/2021.
 //
